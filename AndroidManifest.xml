@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.musicalstructureapp">
+
+    <application
+        android:label="@string/app_name">
+        <activity
+            android:name=".NowPlayingActivity"
+            android:label="Now Playing"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".InstrumentActivity"
+            android:label="Instruments"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".SongsActivity"
+            android:label="Songs"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NowPlayingActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/mainactivity" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/now_playing"
+        android:textSize="48sp" />
+
+    <TextView
+        android:id="@+id/now_playing_song"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@color/now_playing_text"
+        android:textColor="@color/mainActivity"
+        android:textSize="32sp"
+        tools:text="Song Name" />
+
+    <TextView
+        android:id="@+id/now_playing_artist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/now_playing_song"
+        android:layout_centerHorizontal="true"
+        android:background="@color/now_playing_text"
+        android:textColor="@color/mainActivity"
+        android:textSize="24sp"
+        android:textStyle="italic"
+        tools:text="Artist" />
+
+    <SeekBar
+        android:id="@+id/seek_bar"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:layout_below="@id/now_playing_artist"
+        android:layout_marginTop="120dp"
+        android:background="#311B92" />
+
+    <LinearLayout
+        android:id="@+id/control_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/seek_bar"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:background="@color/button_background"
+            android:text="@string/pause"
+            android:textColor="@color/mainActivity" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:background="@color/button_background"
+            android:text="@string/play"
+            android:textColor="@color/mainActivity" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:background="@color/button_background"
+            android:text="@string/stop"
+            android:textColor="@color/mainActivity" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
